@@ -1,0 +1,25 @@
+{
+  "name": "firstGame",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "kaboom": "^3000.0.2"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  },
+  "types": "dist/kaboom.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/kaboom.mjs",
+      "require": "./dist/kaboom.cjs"
+    },
+    "./plugins/*": {
+      "import": "./dist/plugins/*.mjs",
+      "require": "./dist/plugins/*.cjs"
+    }
+  }
+}
